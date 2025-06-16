@@ -59,8 +59,6 @@ To compile Rust code natively on your machine, you should install the language t
 -->
 
 
-> <img src="../assets/img/info.png" alt="info" width="16" style="margin-top: 3px; margin-bottom: -3px"/> The main compilation script, `make.py`, is tested for Python 3.7 and higher. If you have an older Python version, you may have to upgrade it first. We recommend using some virtualized environment such as [pyenv](https://github.com/pyenv/pyenv) to avoid breaking your OS or other projects.
-
 **Ubuntu / Debian**
 1. Install Rust and its tools using [rustup](https://rustup.rs):
    ```bash
@@ -154,6 +152,8 @@ Then you can use `cargo xtasks` to install what you like:
 <!--   ``` -->
 
 After all these commands you can find your binaries/images in the `target/release` directory.
+
+> <img src="../assets/img/info.png" alt="info" width="16" style="margin-top: 3px; margin-bottom: -3px"/> `cargo xtasks` has a built-in registry of services and on which platform they are available. Not all services are available for all platforms. If any of the above commands does not work with a warning that a service is unknown that probably means that that service is not available for your operating system. If this is a problem for you feel free to file an issue on [GitHub](https://github.com/braneframework/brane/issues), and we will take a look.
 
 > <img src="../assets/img/warning.png" alt="drawing" width="16" style="margin-top: 2px; margin-bottom: -2px"/> Note that compiling **any of these** will result in quite large build caches (order of GB's). Be sure to have at least 10 GB available on your device before you start compiling to make sure your OS keeps functioning.
 
