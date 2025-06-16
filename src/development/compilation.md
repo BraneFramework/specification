@@ -105,40 +105,55 @@ Simply follow the instructions on <https://www.docker.com/get-started/> to get s
 ## Compilation
 With the dependencies install, you can then compile the parts of the framework of your choosing.
 
-For all of them, first clone the [repository](https://github.com/epi-project/brane). Either download it from Github's interface (the green button in the top-right), or clone it using the command-line:
+For all of them, first clone the [repository](https://github.com/braneframework/brane). Either download it from Github's interface (the green button in the top-right), or clone it using the command-line:
 ```bash
-git clone https://github.com/epi-project/brane && cd brane
+git clone https://github.com/braneframework/brane && cd brane
 ```
 
-Then you can use the `make.py` script to install what you like:
+Then you can use `cargo xtasks` to install what you like:
 - To build the `brane` CLI tool, run:
+
   ```bash
-  python3 make.py cli
+  cargo xtask build brane-cli
   ```
+
 - To build the `branectl` CLI tool, run:
+
   ```bash
-  python3 make.py ctl
+  cargo xtask build brane-ctl
   ```
+
 - To build the `branec` BraneScript compiler, run:
+
   ```bash
-  python3 make.py cc
+  cargo xtask brane-cc
   ```
-- To build the `libbrane_cli.so` dynamic library, run:
+
+<!-- - To build the `libbrane_cli.so` dynamic library, run: -->
+<!---->
+<!--   ```bash -->
+<!--   python3 make.py libbrane_cli -->
+<!--   ``` -->
+
+- To build the services for a control node, run:
+
   ```bash
-  python3 make.py libbrane_cli
+  cargo xtask build central
   ```
-- To build the servives for a control node, run:
+
+- To build the services for a worker node, run:
+
   ```bash
-  python3 make.py instance
+  cargo xtask build worker
   ```
-- To build the servives for a worker node, run:
-  ```bash
-  python3 make.py worker-instance
-  ```
-- To build the servives for a proxy node, run:
-  ```bash
-  python3 make.py proxy-instance
-  ```
+
+<!-- - To build the services for a proxy node, run: -->
+<!---->
+<!--   ```bash -->
+<!--   python3 make.py proxy-instance -->
+<!--   ``` -->
+
+After all these commands you can find your binaries/images in the `target/release` directory.
 
 > <img src="../assets/img/warning.png" alt="drawing" width="16" style="margin-top: 2px; margin-bottom: -2px"/> Note that compiling **any of these** will result in quite large build caches (order of GB's). Be sure to have at least 10 GB available on your device before you start compiling to make sure your OS keeps functioning.
 
