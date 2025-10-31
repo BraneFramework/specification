@@ -3,16 +3,32 @@
 [Welcome](./welcome.md)
 [Overview](./overview.md)
 
+-----
 # Development
 - [Introduction](./development/introduction.md)
 - [Compiling binaries](./development/compilation.md)
 
+-----
+# Configuration files
+- [Introduction](./config/introduction.md)
+- [Users](./config/users/introduction.md)
+  - [`container.yml`](./config/users/container.md)
+  - [`data.yml`](./config/users/data.md)
+- [Administrators](./config/admins/introduction.md)
+  - [`infra.yml`](./config/admins/infra.md)
+  - [`backend.yml`](./config/admins/backend.md)
+  - [`data.yml`](./config/admins/data.md)
+  - [`proxy.yml`](./config/admins/proxy.md)
+  - [`node.yml`](./config/admins/node.md)
+
+-----
 # Design requirements
 - [Introduction](./requirements/introduction.md)
 - [Background](./requirements/background.md)
 - [Context & Use-case](./requirements/use_case.md)
 - [Requirements](./requirements/requirements.md)
 
+-----
 # Implementation
 - [Introduction](./implementation/introduction.md)
 - [Bird's-eye view](./implementation/bird_eye.md)
@@ -29,8 +45,10 @@
     - [`brane-api`](./implementation/services/brane-api.md)
     - [`brane-job`](./implementation/services/brane-job.md)
     - [`brane-reg`](./implementation/services/brane-reg.md)
+    - [`brane-chk`](./implementation/services/brane-chk.md)
     - [`brane-prx`](./implementation/services/brane-prx.md)
 
+-----
 # Framework specification
 - [Introduction](./spec/introduction.md)
 - [Workflow Internal Representation (WIR)](./spec/wir/introduction.md)
@@ -38,15 +56,15 @@
     - [Layer 1: The graph](./spec/wir/graph.md)
     - [Layer 2: Instructions](./spec/wir/instructions.md)
 
+-----
 # Future work
 - [Introduction](./future/introduction.md)
-
 
 -----
 # Appendix
 - [Overview](./appendix/overview.md)
 - [Appendix A: BraneScript specification](./appendix/languages/bscript/introduction.md)
-    - [Introduction](./appendix/languages/bscript/introduction.md)
+    <!-- - [Introduction](./appendix/languages/bscript/introduction.md) -->
     - [Features](./appendix/languages/bscript/features.md)
     - [Formal grammar](./appendix/languages/bscript/syntax.md)
     - [Scoping rules](./appendix/languages/bscript/scoping.md)

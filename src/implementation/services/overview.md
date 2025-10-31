@@ -12,4 +12,5 @@ The services found in the central orchestrator are:
 The following services are placed on each domain:
 - [brane-job](./brane-job.md) implements the _worker_ and processes the incoming events from the driver.
 - [brane-reg](./brane-reg.md) implements the _local audit log_ and provides local information to its `brane-job` and the central registry `brane-api`. It also implements partial _worker_ functionality by fascilitating data transfers.
+- [brane-chk](./brane-chk.md) implements the _checker_ and casts a verdict on whether a workflow is allowed to run on a certain domain.
 - [brane-prx](./brane-prx.md) implements the _proxy_ and fascilitates and polices inter-node communication.
